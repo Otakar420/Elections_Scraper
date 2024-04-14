@@ -1,0 +1,5 @@
+# idea folder
+.idea/
+
+# virtual enviroment
+/scraper-venv/
