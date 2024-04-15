@@ -241,7 +241,7 @@ def get_csv(data: dict, filename: str) -> None:
     os.makedirs("Results", exist_ok=True)
 
     # Define the file path
-    file_path = os.path.join("results", add_extension(filename, "csv"))
+    file_path = os.path.join("Results", add_extension(filename, "csv"))
 
     # Check if the file already exists
     if os.path.exists(file_path):
