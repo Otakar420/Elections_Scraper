@@ -172,11 +172,12 @@ def get_code_from_url(
         raise ValueError(f"ERROR parsing URL or parameter_name not found: {ve}")
 
 
-def get_votes_of_parties(page: BeautifulSoup,
-                         party_name_class: str = "overflow_name",
-                         votes_class: str = "cislo",
-                         headers: list[str] = ("t1sa2 t1sb3", "t2sa2 t2sb3"),
-                         container_tag: str = "td"
+def get_votes_of_parties(
+        page: BeautifulSoup,
+        party_name_class: str = "overflow_name",
+        votes_class: str = "cislo",
+        headers: list[str] = ("t1sa2 t1sb3", "t2sa2 t2sb3"),
+        container_tag: str = "td"
 ) -> dict:
     """
     Extracts the votes count for each political party from the given page content.
