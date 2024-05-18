@@ -6,11 +6,15 @@ in 2017 based on the selected territorial unit. You can choose any territorial u
 from this [link](https://volby.cz/pls/ps2017nss/ps3?xjazyk=CZ).
 
 ## Library Installation
+
+The code has been tested with Python 3.12.1.
+
 The libraries used in the code are stored in the `requirements.txt` file.
 It is recommended to install them using a new virtual environment.
 Run the following commands with your package manager:
 
 ```python
+$ python3 --version                 # check the version of Python
 $ pip3 --version                    # check the version of the package manager
 $ pip3 install -r requirements.txt  # install the libraries
 ```
