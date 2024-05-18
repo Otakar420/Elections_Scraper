@@ -44,8 +44,8 @@ python elections_scraper.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj
 ```
 DOWNLOADING DATA FROM THE SELECTED URL: 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101'
 Scraping districts informations: 100% |████████████████████████████████████████████| 114/114 [00:00]
-CSV FILE SUCCESSFULLY CREATED: 'benesov.csv'
-BAR PLOT SUCCESSFULLY CREATED: 'Top_10_Parties_of_benesov.png'
+CSV FILE SUCCESSFULLY CREATED: 'Results\benesov.csv'
+BAR PLOT SUCCESSFULLY CREATED: 'Results\Top_10_Parties_of_benesov.png'
 PROCESS SUCCESSFULLY FINISHED
 ```
 
