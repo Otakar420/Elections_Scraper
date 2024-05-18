@@ -37,7 +37,7 @@ Example of running the project for the Benešov district:
 
 ### Command to execute the program:
 ```python
-python elections-scraper.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101" benesov
+python elections_scraper.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101" benesov
 ```
 
 ### Progress of downloading:
