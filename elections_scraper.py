@@ -472,7 +472,7 @@ def plot_top_10_parties(data: dict,
     # Save the plot to a file
     plt.savefig(file_path)
     plt.close()
-    print(f"BAR PLOT SUCCESSFULLY CREATED: '{file_path}")
+    print(f"BAR PLOT SUCCESSFULLY CREATED: '{file_path}'")
 
 
 def add_extension(filename: str,
