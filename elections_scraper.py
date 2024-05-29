@@ -8,6 +8,7 @@
 import os
 import sys
 from pprint import pprint
+from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 import pandas as pd
@@ -298,17 +299,11 @@ def get_code_from_url(url: str,
     :return: The extracted code (xobec value) or None if not found.
     :rtype: str
     """
-    try:
-        # Parse the URL using urllib.parse
-        url_parts = urlparse(url)
-        query_dict = parse_qs(url_parts.query)
+    # Parse the URL using urllib.parse
+    url_parts = urlparse(url)
+    query_dict = parse_qs(url_parts.query)
 
-        return query_dict.get(parameter_name, [None])[0]
-
-    except ValueError as parsing_error:
-        # Handle potential parsing errors
-        raise ValueError(f"ERROR parsing URL or parameter_name not found:"
-                         f" {parsing_error}")
+    return query_dict.get(parameter_name, [None])[0]
 
 
 def get_votes_of_parties(page: BeautifulSoup,
@@ -344,7 +339,7 @@ def get_votes_of_parties(page: BeautifulSoup,
 
     except Exception as error:
         print(f"ERROR occurred while extracting votes of parties: {error}")
-        return {}
+        return None
 
     else:
         political_parties_votes = page.find_all(container_tag,
@@ -487,10 +482,12 @@ def add_extension(filename: str,
     :return: The filename with the added extension.
     :rtype: str
     """
-    if filename.endswith(f".{extension}"):
-        return filename
+    filepath = Path(filename)
+    print(filepath)
+    if filepath.suffix == f".{extension}":
+        return str(filepath)
     else:
-        return f"{filename}.{extension}"
+        return str(filepath.with_suffix(f".{extension}"))
 
 
 def elections_scraper(url, filename):
